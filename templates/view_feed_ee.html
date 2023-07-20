@@ -1,0 +1,22 @@
+{% extends 'eee_base.html' %}
+
+{% block content %}
+    <div class="feedh1">
+    <h1> Feedback for {{ post1['title'] }} </h1>
+    </div>
+<br><br><br> <br>
+    <div class="formsss-group" >
+        {% for p in posts %}
+            {% if p['id2'] == post1['id']  %}
+
+                    <div>
+                        <h2>
+                           <li>{{ p['feedback'] }}</li>
+                            
+                        </h2>
+                    </div>
+             {% endif %}
+         {% endfor %}
+    </div>
+<hr>
+{% endblock %}

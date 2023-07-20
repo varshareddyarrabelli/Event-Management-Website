@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+	 {% with statuss = get_flashed_messages(category_filter=["status"]) %}  
+          {% if statuss %}
+               {% for message in statuss %}  
+                    <li>{{ message }}</li>
+               {% endfor %}
+          {% endif %}  
+         {% endwith %}
+
+</body>
+</html>

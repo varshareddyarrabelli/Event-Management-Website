@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		/* Styling the body */
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		/* Styling section, giving background
+			image and dimensions */
+		section {
+			width: 100%;
+			height: 100vh;
+			background-color: rgb(48, 47, 47);
+			background-size: cover;
+		}
+
+		/* Styling the left floating section */
+		section .leftBox {
+			position: fixed;
+			width: 70%;
+			height: 100%;
+			float: left;
+			padding: 50px;
+			box-sizing: border-box;
+			background-color: rgb(14, 15, 15);
+			background-image: url('{{post['url']}}');
+			background-repeat: no-repeat;
+			background-attachment: inherit;
+			background-size: cover;
+		}
+
+		/* Styling the background of
+			left floating section */
+		section .leftBox .content {
+			color: #fff;
+			background: rgba(0, 0, 0, 0.5);
+			padding: 40px;
+			transition: .5s;
+		}
+
+		/* Styling the hover effect
+			of left floating section */
+		section .leftBox .content:hover {
+			background: rgb(172, 12, 55);
+		}
+
+		/* Styling the header of left
+			floating section */
+		section .leftBox .content h1 {
+			margin: 0;
+			padding: 0;
+			font-size: 40px;
+			text-transform: uppercase;
+		}
+
+		/* Styling the paragraph of
+			left floating section */
+		section .leftBox .content p {
+			margin: 10px 0 0;
+			padding: 0;
+		}
+
+		/* Styling the three events section */
+		section .events {
+			position: relative;
+			width: 30%;
+			height: 100%;
+			background: rgb(172, 12, 55);
+			float: right;
+			box-sizing: border-box;
+			background-color: rgb(48, 47, 47);
+
+		}
+
+		/* Styling the links of
+		the events section */
+		section .events ul {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			margin: 0;
+			padding: 40px;
+			width: 100%;
+			height: 100%;
+			box-sizing: border-box;
+		}
+
+		/* Styling the lists of the event section */
+		section .events ul li {
+			list-style: none;
+			background: #fff;
+			box-sizing: border-box;
+			height: 100px;
+			margin: 15px 0;
+		}
+
+		/* Styling the time class of events section */
+		section .events ul li .time {
+			position: relative;
+			padding: 20px;
+			background: #262626;
+			box-sizing: border-box;
+			width: 25%;
+			height: 30%;
+			float: left;
+			text-align: center;
+			transition: .5s;
+		}
+
+		/* Styling the hover effect
+			of events section */
+		section .events ul li:hover .time {
+			background: #393539;
+		}
+
+		/* Styling the header of time
+			class of events section */
+		section .events ul li .time h2 {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: rgb(172, 12, 55);
+			font-size: 60px;
+			line-height: 30px;
+		}
+
+		/* Styling the texts of time
+		class of events section */
+		section .events ul li .time h2 span {
+			font-size: 30px;
+		}
+
+		/* Styling the details
+		class of events section */
+		section .events ul li .details {
+			padding: 20px;
+			background: rgb(172, 12, 55);
+			box-sizing: border-box;
+			width: 100%;
+			height: 100%;
+			float: none;
+		}
+
+		/* Styling the header of the
+		details class of events section */
+		section .events ul li .details h3 {
+			position: relative;
+			margin: 0;
+			padding: 0;
+			font-size: 22px;
+		}
+
+		/* Styling the lists of details
+		class of events section */
+		section .events ul li .details p {
+			position: relative;
+			margin: 10px 0 0;
+			padding: 0;
+			font-size: 16px;
+		}
+
+		/* Styling the links of details
+		class of events section */
+		section .events ul li .details a {
+			display: inline-block;
+			text-decoration: none;
+			padding: 10px 15px;
+			border: 1.5px solid #262626;
+			margin-top: 8px;
+			font-size: 18px;
+			transition: .5s;
+		}
+
+		/* Styling the details class's hover effect */
+		section .events ul li .details a:hover {
+			background: #e91e63;
+			color: rgb(72, 117, 44);
+			border-color: #e91e63;
+		}
+	</style>
+</head>
+
+<body>
+	<section>
+		<div class="leftBox">
+			<div class="content">
+				<h1>
+					{{post['title']}}
+				</h1>
+
+				<p>
+					{{post['content']}}
+				</p>
+
+			</div>
+		</div>
+
+		<div class="events">
+			<ul>
+				<li>
+
+					<div class="details">
+						<h3>
+							DEPARTMENT 
+						</h3>
+
+						
+							<p style="color:silver;">{{post['dept_name']}}
+						</p>
+
+
+
+					</div>
+					<div style="clear: both;"></div>
+				</li>
+
+				<li>
+
+					<div class="details">
+						<h3>
+							EVENT VENUE
+						</h3>
+
+						
+							<p style="color:silver;">{{post['venue']}}
+						</p>
+
+
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+
+				<li>
+
+
+					<div class="details">
+						<h3>
+							DATE:{{post['date1']}}
+            </h3>
+
+							<p style="color:silver;"> TIME:{{post['time']}}</p>
+
+				
+							
+
+
+					</div>
+					<div style="clear:both;"></div>
+				</li>
+			</ul>
+		</div>
+	</section>
+</body>
+
+</html>

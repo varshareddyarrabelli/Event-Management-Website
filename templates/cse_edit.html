@@ -1,0 +1,56 @@
+{% extends 'cse_base.html' %}
+
+{% block content %}
+<h1>{% block title %} Edit "{{ post['title'] }}" {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="Post title"
+               class="form-control"
+               value="{{ request.form['title'] or post['title'] }}" required>
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content</label>
+        <textarea name="content" placeholder="Post content"
+                  class="form-control" required>{{ request.form['content'] or post['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <label for="venue">Venue</label>
+        <input type="text" name="venue"
+               placeholder="Enter Venue" class="form-control"
+               value="{{ request.form['venue'] or post['venue']}}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="time">Timings</label>
+        <input type="text" name="time"
+               placeholder="Enter Timings" class="form-control"
+               value="{{ request.form['time'] or post['time']}}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="date1">Date</label>
+        <input type="date" name="date1"
+               placeholder="Enter date" class="form-control"
+               value="{{ request.form['date1'] or post['date1']}}"></input>
+    </div>
+    <div class="form-group">
+        <label for="url">url</label>
+        <input type="text" name="url"
+               placeholder="Enter url" class="form-control"
+               value="{{ request.form['url'] or post['url']}}"></input>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+<hr>
+<form action="{{ url_for('cse_delete', id=post['id']) }}" method="POST">
+    <input type="submit" value="Delete Event"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Are you sure you want to delete this event?')">
+</form>
+{% endblock %}

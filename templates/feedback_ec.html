@@ -1,0 +1,20 @@
+{% extends 'past_ece_base.html' %}
+
+{% block content %}
+
+<form action="{{ url_for('submitfeed_ec', id=post['id']) }}" method="post">
+    <div class="form-group">
+    <h1> Feedback for {{ post['title'] }} </h1>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Feedback</label>
+        <textarea name="content" placeholder="Post feedback"
+                  class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <a href="{{ url_for('submitfeed_ec', id=post['id']) }}"><button type="submit" class="btn btn-primary">Submit</button> </a>
+    </div>
+</form>
+<hr>
+{% endblock %}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-color:darkslategray;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling section, giving background
+			image and dimensions */
+        section {
+            width: 100%;
+            height: 100vh;
+            background:
+                /* url('https://media.geeksforgeeks.org/wp-content/uploads/20210408155049/gfg9.png'); */
+            background-size: cover;
+        }
+
+        /* Styling the left floating section */
+        section .leftBox {
+            position: fixed;
+            width: 50%;
+            height: 100%;
+            float: left;
+            padding: 50px;
+            box-sizing: border-box;
+            background-color: darkslategray;
+            background-image: url('https://wallpapercave.com/wp/wp7488230.jpg');
+            background-repeat: no-repeat;
+            background-attachment: inherit;
+            background-size: cover;
+        }
+
+        /* Styling the background of
+			left floating section */
+        section .leftBox .content {
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            transition: .5s;
+        }
+
+        /* Styling the hover effect
+			of left floating section */
+        section .leftBox .content:hover {
+            background: #9961a4;
+        }
+
+        /* Styling the header of left
+			floating section */
+        section .leftBox .content h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Styling the paragraph of
+			left floating section */
+        section .leftBox .content p {
+            margin: 10px 0 0;
+            padding: 0;
+        }
+
+        /* Styling the three events section */
+        section .events {
+            position: relative;
+            width: 50%;
+            height: 100%;
+            background-color: #bfc9d8;
+            float: right;
+            box-sizing: border-box;
+        }
+
+        /* Styling the links of
+		the events section */
+        section .events ul {
+            /* position: absolute;
+            top: 50%; */
+            width: 100%;
+            /* transform: translateY(-50%); */
+            margin: 0;
+            padding: 40px;
+            box-sizing: border-box;
+            background-color: #bfc9d8;
+        }
+
+        /* Styling the lists of the event section */
+        section .events ul li {
+            list-style: none;
+            background: #fff;
+            box-sizing: border-box;
+            height: 200px;
+            margin: 15px 0;
+            width: 100%;
+        }
+
+        /* Styling the time class of events section */
+        section .events ul li .time {
+            position: relative;
+            padding: 20px;
+            background: #262626;
+            box-sizing: border-box;
+            width: 30%;
+            height: 100%;
+            float: left;
+            text-align: center;
+            transition: .5s;
+        }
+
+        /* Styling the hover effect
+			of events section */
+        section .events ul li:hover .time {
+            background: #9961a4;
+        }
+
+        /* Styling the header of time
+			class of events section */
+        section .events ul li .time h2 {
+            position: absolute;
+            margin: 0;
+            padding: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 60px;
+            line-height: 30px;
+        }
+
+        /* Styling the texts of time
+		class of events section */
+        section .events ul li .time h2 span {
+            font-size: 30px;
+        }
+
+        /* Styling the details
+		class of events section */
+        section .events ul li .details {
+            padding: 20px;
+            background: #fff;
+            box-sizing: border-box;
+            width: 70%;
+            height: 100%;
+            float: left;
+        }
+
+        /* Styling the header of the
+		details class of events section */
+        section .events ul li .details h3 {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            font-size: 22px;
+        }
+
+        /* Styling the lists of details
+		class of events section */
+        section .events ul li .details p {
+            position: relative;
+            margin: 10px 0 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        /* Styling the links of details
+		class of events section */
+        section .events ul li .details a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 10px 15px;
+            border: 1.5px solid #262626;
+            margin-top: 8px;
+            font-size: 18px;
+            transition: .5s;
+            border-radius: 50px;
+            color: purple;
+        }
+
+        /* Styling the details class's hover effect */
+        section .events ul li .details a:hover {
+            background: #9961a4;
+            color: #fff;
+            border-color: #9961a4;
+        }
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/ece/past">Past Events</a></li> 
+    <li>
+   	<form action="/ece/search1" method="post">
+
+    <input type="text" placeholder="Enter event" name="searchtxt" required>
+    
+    <a href="/ece/search1"><button type="submit" color:red>Search</button> </a>
+    
+</form>
+    </li>
+</ul>
+</body>
+<body>
+    <section>
+        <div class="leftBox">
+            <div class="content">
+                <h1>
+                    Events and Shows
+                </h1>
+
+
+            </div>
+        </div>
+
+        <div class="events">
+        {% for post in posts %}
+            {% if post['dept_name']=='ece'  and post['flag']==1 and post['date1']>=dates %}
+            <ul>
+                <li>
+                    <div class="time">
+                        <h2>
+                            {{post['date1'][8]}}{{post['date1'][9]}}
+                            {% if ((post['date1'][5]=='0') and (post['date1'][6]=='1')) %}
+                                <hr>Jan</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='2')) %}
+                                <hr>Feb</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='3')) %}
+                                <hr>Mar</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='4')) %}
+                                <hr>Apr</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='5')) %}
+                                <hr>May</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='6')) %}
+                                <hr>June</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='7')) %}
+                                <hr>July</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='8')) %}
+                                <hr>Aug</hr>
+                            {% elif ((post['date1'][5]=='0') and (post['date1'][6]=='9')) %}
+                                <hr>Sep</hr>
+                            {% elif ((post['date1'][5]=='1') and (post['date1'][6]=='0')) %}
+                                <hr>Oct</hr>
+                            {% elif ((post['date1'][5]=='1') and (post['date1'][6]=='1')) %}
+                                <hr>Nov</hr>
+                            {% else %}
+                                <hr>Dec</hr>
+                            {% endif %}
+                            
+                        </h2>
+                    </div>
+                    
+                    <div class="details">
+                        <h3>
+                            {{post['title']}}
+                        </h3>
+
+                        <p>
+                            VENUE: {{post['venue']}}<br>
+                            TIMINGS: {{post['time']}}
+                        </p>
+
+
+                       <p><a href="{{url_for('post',post_id=post['id'])}}">View Details</a></p>
+                    </div>
+                    <div style="clear: both;"></div>
+                </li>
+            </ul>
+            {% endif %}
+        {% endfor %}
+        </div>
+    </section>
+</body>
+</html>
+
+
+

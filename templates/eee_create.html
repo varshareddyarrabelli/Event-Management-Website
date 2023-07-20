@@ -1,0 +1,51 @@
+{% extends 'eee_base.html' %}
+
+{% block content %}
+<h1>{% block title %} Create a New Post {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title"
+               placeholder="Post title" class="form-control"
+               value="{{ request.form['title'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Content</label>
+        <textarea name="content" placeholder="Post content"
+                  class="form-control">{{ request.form['content'] }}</textarea>
+    </div>
+    
+    <div class="form-group">
+        <label for="venue">Venue</label>
+        <input type="text" name="venue"
+               placeholder="Enter Venue" class="form-control"
+               value="{{ request.form['venue'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="time">Timings</label>
+        <input type="text" name="time"
+               placeholder="Enter Timings" class="form-control"
+               value="{{ request.form['time'] }}"></input>
+    </div>
+    
+    <div class="form-group">
+        <label for="date1">Date</label>
+        <input type="date" name="date1"
+               placeholder="Enter date" class="form-control"
+               value="{{ request.form['date1'] }}"></input>
+    </div>
+    <div class="form-group">
+        <label for="url">url</label>
+        <input type="text" name="url"
+               placeholder="Enter url" class="form-control"
+               value="{{ request.form['url'] }}"></input>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
+{% endblock %}
