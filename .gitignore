@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches
+.cache/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Environment variables
+.env
+
+# Compiled source
+*.pyc
+
+# Flask specific
+instance/
+
+# VSCode-specific files
+.vscode/
