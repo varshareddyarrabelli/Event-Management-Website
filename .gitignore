@@ -10,6 +10,7 @@ dist/
 *.egg
 MANIFEST
 
+# .gitignore
 # Logs and databases
 *.log
 *.sqlite
